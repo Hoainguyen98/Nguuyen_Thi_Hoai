@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style >
+		ul{
+			padding-left: 0;       
+			background: green; 
+			line-height: 42px;
+		}
+		.item{
+			background: grey;
+		}
+		.menu{
+			display: inline-block;	
+			position: relative;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.menu:hover {
+			background: grey;
+		}
+		.li{
+		list-style: none;
+		}
+         .submenu{
+         	position: absolute;
+         	display: none;
+         	min-width: 150px;
+         	left: 0;
+         }
+        
+         #a{
+         	height: 42px;
+         }
+		.li:hover {
+			background: grey;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="item">
+		<ul id="a">
+			<li class="menu" ><a href="#" > Home</a></li>
+			<li class="menu"><a href="#"> Menu</a>
+            <ul class="submenu ">
+            	<li class="li">Hoai</li>
+            	<li  class="li">Anh</li>
+            	<li class="li">Nhung</li>
+            </ul>
+			</li>
+			<li class="menu"><a href="#"> Course</a></li>
+			<li class="menu"><a href="#"> Contact</a></li>
+		</ul>
+	</div>
+</body>
+</html>

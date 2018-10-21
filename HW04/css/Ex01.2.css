@@ -1,0 +1,54 @@
+<style type="text/css" >
+	ul{
+		padding-left: 0;       
+		background: #78b43d; 
+		line-height: 42px;	
+
+	}
+	.Submenu{
+		display: inline-block;
+		position: relative;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.Submenu:hover{
+		background: grey;
+	}
+	.li:hover{
+		display: block;
+		background: grey;
+
+	}
+	.con{
+		position: absolute;
+		display: none;
+		min-width: 200px;
+		left: 0;
+	}
+	.con:hover{
+		display: block;
+
+	}
+	.Submenu:hover .con{
+		display: block;
+		list-style: none;
+	}
+	.min:hover{
+		display: block;
+		background: grey;
+	}
+	.li:hover .fly{
+		display: block;
+		list-style: none;
+	}
+	.fly{
+		position: relative;
+		display: none;
+		min-width: 200px;
+		left: 0px;
+	}
+	.li{
+			height: 42px;
+			position: relative;
+		}
+</style>
