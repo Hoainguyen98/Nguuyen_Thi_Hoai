@@ -1,0 +1,47 @@
+<style type="text/css">
+	.first{
+		color: white;
+		margin-bottom: auto;
+	}
+	.part1{
+		background-color: #ba0909;
+		padding-left: 0;
+		
+	}
+	.menu-lv1{
+		display: inline-block;
+		border-right: 1px solid;
+
+	}
+	.menu-lv2{
+		display: inline-block; 
+		list-style: none;
+		padding-right: 15px;
+		border-right: 1px solid;
+		color: white;
+
+	}
+	.menu-lv2:hover{
+		background: grey;
+		text-decoration: none;
+		color: white;
+	}
+	.part2{
+		background: grey;
+
+	}
+	.footer{
+		width: 1000px;
+		border: 1px solid none;
+		padding:30px;
+		margin: auto;
+		background: white;
+
+	}
+	.p1{
+		width: 67%;
+	}
+	.p2{
+		width: 33%;
+	}
+</style>
