@@ -1,0 +1,156 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}#body{
+	width: 100%;
+	height: auto;
+}
+#header{
+	width: 50%;
+	margin: 0 auto;
+	height: 250px;
+}.item{
+	margin-left: 20px;
+	float: left;
+}
+	.img-logo {
+		float: left;
+		margin-top: 30px;
+	}
+.menu{
+	float: left;
+	padding-top: 50px;
+}
+.item>a{
+	list-style: none;
+	text-decoration: none;
+}.item>img{
+	
+}#content{
+	padding-top: 50px;
+	width: 80%;
+	height: auto;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 40px;
+}.content1{
+	text-align: center;
+	padding-top: 20px;
+	background-color: #E6E6E6;
+}
+.content1>h1{
+	font-size: 40px;
+	color: #58ACFA;
+}.content1-img{
+	width: 100%;
+}.content1-img >.img{
+	width: 30%;
+	display: inline-block;
+	padding-right: 10px;
+	text-align: left;
+	padding-top: 20px;
+}.img>img{
+	width: 100%;
+}.img>h3{
+	color: #58ACFA;
+}
+i{
+	color: black;
+}.content2{
+	width: 100%;
+	padding-top: 40px;
+	padding-left: 20px;
+}.about-me{
+	width: 40%;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 40px;
+}.about-me>h3{
+	color:#58ACFA; 
+}.about-me>p span{
+	color:#58ACFA;
+	text-decoration: underline;
+}.about-me>p i{
+	padding-right: 20px;
+	padding-left: 20px;
+    padding-top: 40px;
+    font-size: 30px;
+    color:#58ACFA;
+
+}
+.about-me>h3+p{
+	padding-top: 20px;
+}.content3{
+	clear: both;
+	width: 100%;
+	background-color: #58ACFA;
+	padding-top: 40px;
+}
+.content3>.title{
+	padding-left: 15%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.login{
+	padding-left: 15%;
+}
+.login>input{
+	width: 80%;
+}
+.login>b{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+@media(max-width: 700px){
+	#header{
+		width: 100%;
+	}
+	#content>.content1>h1 p{
+		width: 100%;
+	}.item{
+		width: 100%;
+	}
+	.content1-img{
+		float: none;
+	}
+	.content1-img >.img{
+		width: 45%;
+		display: inline-block;
+	}
+
+	.content2>.about-me{
+		width: 50%;
+		float:none;
+	}.content3{
+		width: 100%;
+	}
+}
+@media (max-width: 480px){
+	#header{
+		width: 100%;
+	}#header>.menu>.item{
+		display: none;
+	}
+	.menu>img{
+		width: 100%;
+		display: block;
+	}
+	.content1-img{
+		float: none;
+	}
+	.content1-img>.img{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#content>.content1>h1 p{
+		width: 100%;
+	}
+	.content2>.about-me{
+		width: 100%;
+		float:none;
+	}.content3{
+		width: 100%;
+	}
+}
+

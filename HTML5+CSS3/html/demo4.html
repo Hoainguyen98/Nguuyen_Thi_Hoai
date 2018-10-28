@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<style type="text/css">
+	#menu{
+		height: 45px;
+		background: grey;
+	}
+	#menu>ul>li.iteam {
+		float: left;
+		list-style: none;
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 45px;
+
+	}
+	#menu>ul>li.iteam:hover>a{
+		color: black;
+		text-decoration: none;
+	}
+
+	#menu>ul>li.iteam:first-child {
+		line-height: 45px;
+		color: #fff;
+		display: none;
+		float: none;
+		width: 20px;
+	}
+	@media (max-width: 679px) {
+		#menu>ul>li.iteam{
+			display: none;
+		}
+		#menu>ul>li.iteam:first-child {
+			display: block;
+		}
+		#menu>ul>li.iteam:first-child:hover~.iteam{
+			float: none;
+			display: block;
+		}
+		#menu>ul:hover>li.iteam{
+			float: none;
+			display: block;
+			background: green;
+		}
+		#menu>ul:hover>li.iteam:hover {
+			background: blue;
+		}
+	}
+</style>
+</head>
+<body>
+	<nav id="menu">
+		<ul>
+			<li class="iteam"><i class="fas fa-bars"></i></li>
+			<li class="iteam"><a href="#">Home</a></li>
+			<li class="iteam"><a href="#">Course</a></li>
+			<li class="iteam"><a href="#">About</a></li>
+			<li class="iteam"><a href="#">News</a></li>
+			<li class="iteam"><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
