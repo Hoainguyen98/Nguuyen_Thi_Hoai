@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name="" id="input" placeholder="input here">
+	<button id="add">Add</button>
+	<button id="del">Delete all</button>
+	<table >
+		<tbody id="content">
+			<!--  <tr>
+		 	<td>
+		 		<input type="checkbox" name="">
+		 	</td>
+			<td>aaa</td>
+			<td><button>Delete</button></td>
+			<td><button>Edit</button>
+			</td>
+		</tr>  -->
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		document.getElementById('add').addEventListener('click', function(){
+			var input = document.getElementById('input')
+			var content = document.getElementById('content')
+
+			var value = input.value;
+			// content.innerHTML += value;
+			var temp =`<tr>
+						<td>
+					 		<input type="checkbox" name="">
+					 	</td>
+						<td>`+value+`</td>
+						<td>
+							<button onclick='del(this)'>Delete</button>
+						</td>
+						<td>
+							<button>Edit</button>
+						</td>
+					</tr> `
+			content.innerHTML += temp;
+			input.value = '';
+		});
+		// function del(a){
+		// 	a.parentNode.parentNode.remove();
+		}
+		document.getElementById('del').addEventListener('click', function(){
+			var inputs = document.getElementsByTagName('input');
+			for (var i = inputs.length - 1; i >= 0; i--) {
+				if(inputs[i].checked){
+					inputs[i].parentNode.parentNode.remove();
+				}
+			}
+			
+			// document.getElementById('content').innerHTML ='';
+		})
+	</script>
+</body>
+</html>

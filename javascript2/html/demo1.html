@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" value="Thẻ cần lấy" class="website">
+	<div>
+		<input type="text" value="Thẻ không cần lấy" class="website">
+		<input type="text" value="Thẻ không cần lấy" >
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	var selector = document.querySelectorAll("div input.website");
+      selector[0].style.border="1px solid red";
+</script>

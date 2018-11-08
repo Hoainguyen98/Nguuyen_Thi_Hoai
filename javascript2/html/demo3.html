@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="text" name="Hoai" age="4" school="hubt"></p>
+</body>
+</html>
+<script type="text/javascript">
+	var selector = document.getElementById("text");
+	selector.innerHTML= ' Name '+ selector.getAttribute('name')+ " Age " +selector.getAttribute('age') + " School: "+ selector.getAttribute('school')
+	var input = document.getElementById("input")
+	alert(input.getAttribute('type'));//in ra thông báo 
+</script>

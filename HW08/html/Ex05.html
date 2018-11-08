@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	</head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <body>
+    <script type="text/javascript">
+        function tinh_tong(n){
+    var tong = 0;
+    var index = 1;
+    var tmp=1;
+    ;
+    do
+    {
+    	for (i=1; i<=index; i++) {
+    	tmp*=i;
+    	}
+        tong += index / tmp;
+        index++;
+    }
+    while (index <= n);
+    return tong;
+}
+var n = parseInt(prompt("Nhập n= "));
+document.write("Tổng S= "  + tinh_tong(n));
+    </script>
+
+</body>
+</html

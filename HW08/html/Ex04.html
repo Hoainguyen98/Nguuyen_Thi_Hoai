@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<meta charset="UTF-8">
+<title>Document</title>
+<body>
+	<script type="text/javascript">
+		var dem=0;
+		var n = parseInt(prompt("Nhập n= "));
+		var m = parseInt(prompt("Nhập m= "));
+		if (m>n) {
+			var k = parseInt(prompt('Nhập k= '));
+			document.write(' các số chia hết cho '+k + ' là:');
+			for (var i = n; i <= m; i++){
+				if (i % k == 0){
+					dem++;
+					document.write(i + ' ; ');
+				}
+			}
+		}
+		document.write('Có '+dem+' số chia hết cho '+ k);
+	</script>
+
+</body>
+</html>
