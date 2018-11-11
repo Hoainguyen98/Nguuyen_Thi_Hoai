@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.container{
+			margin-left: 10%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<!-- <form> -->
+	<div>
+		<p>Name</p>
+		<input type="text" name="" class="name">
+		<p class="error" id="nameerror" value="hjbhjb"></p>
+	</div>
+	<div>
+		<p>Email</p>
+		<input type="email" name="" class="email">
+		<p class="error" id="emailerror"></p>
+	</div>
+	<div>
+		<p>Password</p>
+		<input type="password" name="" id="password">
+		<p class="error" id="passworderror"></p>
+	</div>
+	<div>
+		<p>mobile</p>
+		<input type="text" name="" id="mobile">
+		<p class="error" id="mobileerror"></p>
+	</div>
+	<div> <button id="add">ADD</button></div>
+</div>
+<!-- </form> -->
+</body>
+<script type="text/javascript">
+	document.getElementById('add').addEventListener('click', function(e){
+		e.preventDefault();
+	var name= document.getElementsByClassName('name')[0]
+	var email= document.getElementsByClassName('email')[0]
+	var password= document.getElementsByClassName('password')[0]
+	var mobile= document.getElementsByClassName('mobile')[0]
+
+	if (name.value.trim() == '') {
+		document.getElementById('nameerror').innerHTML= 'Bạn phải nhập tên';
+	}else {
+		document.getElementById('nameerror').innerHTML= '';
+	}
+	if (email.value.trim() == '') {
+		document.getElementById('emailerror').innerHTML= 'Bạn phải nhập email ';
+	}else{
+		document.getElementById('emailerror').innerHTML= '';
+	}
+	if (password.value.trim() == '') {
+		document.getElementById('passworderror').innerHTML= 'Bạn phải nhập password lớn hơn 6 số ';
+	}
+	else if(password.value.length < 6){
+		document.getElementById('passworderror').innerHTML= 'sfdsfdsfsd';
+	}
+	else{
+		document.getElementById('passworderror').innerHTML= '';
+	}
+	if (mobile.value.trim() == '') {
+		document.getElementById('mobileerror').innerHTML= 'Bạn phải nhập mobile ';
+	}else{
+		document.getElementById('mobileerror').innerHTML= '';
+	}
+
+})
+</script>
+</html>
