@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#update {
+			display: none
+		}
+	</style>
+</head>
+<body>
+	
+	<input type="" name="" id="input">
+	<button id="add">Add</button>
+	<button id="update">Update</button>
+	<button id="del-all">Delete All</button>
+	<br>
+	<button id="toggle-check">Toggle Check</button>
+	<table>
+		<tbody id="content">
+			
+		</tbody>
+	</table>
+ 	<!--  thu vien jquery -->
+	
+	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var j = 1;
+			$('#add').click(function() {
+
+				var input = $('#input').val()
+
+				$('table').prepend(`<tr id=`+ j +`>
+							<td>
+								<input class="checkbox" type="checkbox" name="">
+							</td>
+							<td>
+								` + input +`
+							</td>
+							<td>
+								<button content = + input + class="edit">Edit</button>
+							</td>
+							<td>
+								<button class="del">Delete</button>
+							</td>
+						</tr>`)
+
+				$('#input').val('')
+				j++;
+			})
+			
+			$('body').on('click', '.del', function() {
+
+				$(this).parent().parent().remove();
+
+			})
+			
+			$('#toggle-check').click(function() {
+				var checkbox = $('.checkbox');
+
+				for (var i = checkbox.length - 1; i >= 0; i--) {
+
+					checkbox[i].checked = !checkbox[i].checked;
+
+				}
+			})
+
+			$('body').on('click', '.edit', function() {
+
+				var content = $(this).attr('content');
+				
+				$('#input').val(content)
+
+				$('#add').css('display', 'none');
+
+				$('#update').css('display', 'inline-block').attr('id-update', $(this).parent().parent().attr('id'));
+				
+
+			})
+			
+		})
+	</script>
+	
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

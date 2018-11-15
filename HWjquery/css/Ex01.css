@@ -1,0 +1,45 @@
+<style type="text/css">
+		.wraper{
+	width: 100%;
+	margin: 0 auto;
+}
+.container {
+	width: 86.5%;
+	background: red;
+	padding: 2em 4em;
+	
+}
+.container input[type=text] {
+	height: 33px;
+	width: 70%;
+}
+.container input[type=button] {
+	height: 40px;
+	width: 27%;
+}
+.container h1 {
+	text-align: center;
+	color: white;
+}
+#content {
+	width: 100%;
+	background: #efeeee;
+}
+#content td.check {
+	width: 6.5%;
+}
+#content td.text {
+	width: 90%;
+}
+#content td.del {
+	width: 10%;
+}
+#content > tr{
+	font-size: 18px;
+	height: 40px;
+	cursor: pointer;
+}
+#content > tr td:first-child {
+	padding-left: 20px;
+} 
+	</style>

@@ -1,0 +1,45 @@
+<style type="text/css">
+	#wraper{ 
+		background-color:#1b1d21;
+		width: 70%;
+		box-shadow: 10px 10px;
+		border-radius: 10px;
+		margin: 0px 10%;
+	}
+	#text{
+		margin-top: 30px;
+		margin-left: 200px;
+		border: 2px solid #50503f;
+		background-color: #685945;
+		border-radius: 15px;
+		width: 60%;
+		height: 500px;
+		box-shadow: 10px 10px;
+	}
+	h1{
+		margin-left: 200px;
+
+	}
+	strong{
+		color: #fcf9f4;
+	}
+	h3{
+		margin-left: 210px;
+		color: #3c2b9b;
+
+	}
+	.tab{
+		font-size: 30px;
+		background: green;
+		border-radius: 10px;
+		color: #cbdc89;
+		width: 40%;
+	}
+	.container{
+		width: 100%;
+		height: 25%;
+
+
+	}
+
+</style>

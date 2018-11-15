@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex02</title>
+	<script src="jquery-3.3.1.min.js"></script>
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/EX02.css">
+	<style type="text/css">
+		#wraper{ 
+		background-color:#1b1d21;
+		width: 70%;
+		box-shadow: 10px 10px;
+		border-radius: 10px;
+		margin: 0px 10%;
+	}
+	#text{
+		margin-top: 30px;
+		margin-left: 200px;
+		border: 2px solid #50503f;
+		background-color: #685945;
+		border-radius: 15px;
+		width: 60%;
+		height: 500px;
+		box-shadow: 10px 10px;
+	}
+	h1{
+		margin-left: 200px;
+
+	}
+	strong{
+		color: #fcf9f4;
+	}
+	h3{
+		margin-left: 210px;
+		color: #3c2b9b;
+
+	}
+	.tab{
+		font-size: 30px;
+		background: green;
+		border-radius: 10px;
+		color: #cbdc89;
+		width: 40%;
+	}
+	.container{
+		width: 100%;
+		height: 25%;
+
+
+	}
+
+	</style>
+</head>
+<body>
+	<div id="wraper">
+
+		<h1><i><strong>ZENT GROUP</strong></i></h1>
+		<h3>--------------->CODE YOUR LIFE</h3>
+
+		<div id="text">
+			<div class="container">
+				<div class="tab" id=""><i class="fas fa-plus-square">Section 1</i></div>
+				<div class="content " style="display: none">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, odio, sunt?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea est architecto alias tenetur nemo, veniam veritatis.
+				</div>
+			</div>
+			<div class="container">
+				<div class="tab"><i class="fas fa-plus-square">Section 2</i></div>
+				<div class="content" style="display: none"> 
+					The speech of the three tribes was conflated in the same way: they all spoke what would have been called *Anglisc, or "Anglish," as it were. By the earliest recorded Old English, this had changed to Englisc. In Middle English, the first vowel,
+			</div>
+			</div>
+			<div class=" container" id="container1">
+				<div class="tab"><i class="fas fa-plus-square">Section 3</i></div>
+				<div class="content" style="display: none"> 
+				<div>
+					English is derived from England, one would think. But in fact the language name is found long before the country name. The latter first appears as Englaland around the year 1000 and means "the land of the Engle," that is, the Angles. The Angles, Saxons, and Jutes were the three
+				</div>	
+			</div>
+			</div>
+			<div class="container">
+				<div class="tab"><i class="fas fa-plus-square">Section 4</i></div>
+				<div class="content" style="display: none">
+					ermany and settled in England around the fourth century ad. Early on, the Angles enjoyed a rise to power that must have made them seem more important than the other two tribes, for all three tribes are indiscriminately referred to in early documents as Angles.
+			</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$( function() {
+			$('.tab').on('click','.fas',function(){
+				var item= $(this);
+				var ii= $('.content');
+				if($(item).hasClass('fa-plus-square')){
+					for (var i = ii.length - 1; i >= 0; i--) {
+						if ($(ii[i]).prev().next().hasClass('fa-minus-square')) {
+							$(ii[i]).prev().next().removeClass('fa-minus-square');
+							$(ii[i]).prev().next().addClass('fa-plus-square');
+							$(ii[i]).css('display','none');
+						}
+					}
+					$(item).removeClass('fa-plus-square');
+					$(item).addClass('fa-minus-square');
+					$(item).parent().next().css('display','block');
+					
+				}else{
+					$(item).removeClass('fa-minus-square');
+					$(item).addClass('fa-plus-square');
+					$(item).parent().next().css('display','none');
+				}
+			})
+		} );
+	</script>
+
+</body>
+</html>
