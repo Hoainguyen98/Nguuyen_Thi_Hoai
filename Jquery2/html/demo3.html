@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<input type="button" name="" value="click">
+	<div >
+		<p>Thẻ p</p>
+		<span>thẻ span</span>
+		<ul id="section">
+			<li >thẻ l1</li>
+			<li>thẻ l2</li>
+			<li>thẻ l3</li>
+			<li class="choose">thẻ l4</li>
+			<li>thẻ l5</li>
+			<li>thẻ l6</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input').on('click', function(){
+				// $('#section').children().eq(1).css('color', 'red')
+				// $('#section').parent().prev().css('color', 'red')// cách khác
+				$('#section').children().filter('.choose').css('color', 'red')
+			})		
+		})
+	</script>
+</body>
+</html>i:<div></div>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		width: 70%;
+		height: 750px;
+		margin-left: 150px;
+		border: 1px solid black;
+	}
+	li{
+		list-style: none;
+		padding-left: 15px;
+		margin-left: 85px;
+		display: inline-block;
+        text-align: center;
+		
+	}
+
+	#contianer{
+		background-color: #0a17150d;
+		width: 70%;
+		height:auto;
+		margin-left: 120px;
+	}
+	li>p{
+		width: 100px;
+		text-align: left;
+		
+	}
+	#content{
+		height: 50px;
+	}
+	strong{
+		font-size: larger;
+
+	}
+	
+	#previous0{
+		margin-left: 600px;
+		padding-left: 10px;
+	}
+	#next0{
+		background-color: #2184be;
+		
+	}
+	#button{
+		padding-top: 20px;
+		width: 100%;
+		line-height: 30px;
+	}
+	.mgs{
+		color: red;
+	}
+	.mgg{
+		color: red;
+	}
+	#button>input{
+		display: inline-block;
+	}
+
+</style>
+</head>
+<body>
+	
+	<ul id="header">
+		<li style="background-color: #2184be" id="head1"><p>Account</p></li>
+		<li id="head2"><p>Profile </p></li>
+		<li id="head3"><p>Warming</p></li>
+		<li id="head4"><p>Finish</p></li>
+	</ul>
+	<hr width="80%">
+	<div id= "contianer" >
+		<div class="content"><strong>Account Information</strong></div>
+
+		<p>User name *</p>
+		<p id="mg1" class="mgs" ></p>
+		<input type="text" name="name" id="name" class="input">
+		
+		<p>Password *</p><p id="mg2"class="mgs"  ></p>
+		<input type="text" name="pass" id="pass" class="input">
+		
+		<p>Confirm Password  *</p>
+		<p id="mg3"class="mgs"></p>
+		<input type="text" name="repass" id="repass" class="input">
+
+		<br>
+		
+	</div>
+	<div id="button">
+		<input type="submit" name="" value="Previous" id="previous0" class="previous">
+		<input type="submit" name="" value="Next" class="next" id="next0">
+	</div>
+</body>
+</html>
+<script type="" src="../js/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$('#button').on('click','.next',function(){
+			var name = $('#name');
+			var password = $('#pass');
+			var repassword =$('#repass');
+			var item =$('.input');
+			if(name.val().trim()== ''){
+				$('#mg1').append('Không được để trống') ; 
+			}else{
+				$('#mg1').val('') ; 
+			}
+			if(password.val().trim()== ''){
+				$('#mg2').append('không được để trống');
+			}else{
+				$('#mg2').val('');
+			}
+			if(repassword.val().trim()== ''){
+				$('#mg3').append('không được để trống') ;
+			}else{
+				$('#mg3').val('');
+			}
+			if(password.val()!= repassword.val()){
+				$('#mg3').append('Mật khẩu khác nhau');
+			}
+			
+			if (item.val().trim()!= '' && password.val() == repassword.val()) {
+
+				$('#head1').css('background-color','#333c49');
+				$('#contianer').children().remove();
+				var html = `
+				<div class="content"><strong>Profile Information</strong></div>
+
+				<p>First name *</p><p id="mg4" class="mgg" ></p>
+				<input type="text" name="name" id="firstname" class="mggg">
+				<p>Last name *</p><p id="mg5"class="mgg" ></p>
+				<input type="text" name="pass" id="lastname" class="mggg">
+				<p>Email * </p><p id="ha3" class="mgg" ></p>
+				<input type="text" name="repass" id="email" class="mggg">
+				<p>Address * </p><p id="mg6" class="mgg" ></p>
+				<input type="text" name="repass" id="address" class="mggg">
+				<p>Age (The warning step will show up if age is less than 18) * </p><p id="ha5"  class="mgg" ></p>
+				<input type="text" name="repass" id="age" class="mggg">
+
+				<br>
+				<p>(*)Mandatory</p>`;
+				$('#contianer').append(html);
+				$('#head2').css('background-color','#2184be');
+				$(this).removeClass('next');
+				$(this).addClass('next1');
+				$('.previous').css('background-color','#2184be');
+
+
+			}
+		})
+		$('#button').on('click','.next1',function(){
+			var firstname=$('#firstname');
+			var lastname=$('#lastname');
+			var email =$('#email');
+			var address =$('#address');
+			var age= $('#age');
+			var item1= $('.mggg')
+
+			if(firstname.val().trim()== ''){
+				$('#mg4').append('Ko được để trống') ; 
+			}else{
+				$('#mg4').val('') ; 
+			}
+			if(lastname.val().trim()== ''){
+				$('#mg5').append('Ko được để trống') ; 
+			}else{
+				$('#mg5').val('') ; 
+			}
+			if(email.val().trim()== ''){
+				$('#ha3').append('Ko được để trống') ; 
+			}else{
+				$('#ha3').val('') ; 
+			}
+			if(address.val().trim()== ''){
+				$('#mg6').append('Ko được để trống') ; 
+			}else{
+				$('#mg6').val('') ; 
+			}
+			if(age.val().trim()== ''){
+				$('#ha5').append('Ko được để trống') ; 
+			}else{
+				$('#ha5').val('') ; 
+			}
+			if (item1.val().trim()!= '') {
+
+				$('#head2').css('background-color','#333c49');
+				$('#contianer').children().remove();
+				var html1 = `
+				<div class="content"><strong>You are to young</strong></div>
+
+				<p>Please go away </p>
+
+
+				<br>
+				<p>(*)Mandatory</p>`;
+				$('#contianer').append(html1);
+				$('#head3').css('background-color','#2184be');
+				$(this).removeClass('next1');
+				$(this).addClass('next2');
+				$('#previous0').removeClass('previous');
+				$('#previous0').addClass('previous1');
+				$('.previous1').css('background-color','#2184be');
+
+			}
+
+		})
+		$('#button').on('click','.next2',function(){
+				$('#head3').css('background-color','#333c49');
+				$('#contianer').children().remove();
+				var html1 = `
+				<div class="content"><strong>Đã Hoàn Thành Xong</strong></div>
+
+				<br>
+				<p>(*)Mandatory</p>`;
+				$('#contianer').append(html1);
+				$('#head4').css('background-color','#2184be');
+				$('.next2').css('background-color','#333c49')
+				$('#previous0').removeClass('previous1');
+				$('#previous0').addClass('previous2');
+				$('.previous2').css('background-color','#2184be');
+		})
+		$('#button').on('click','.previous',function(){
+			
+			$('#head2').css('background-color','#333c49');
+				$('#contianer').children().remove();
+				var html = `<div class="content"><strong>Account Information</strong></div>
+
+		<p>User name *</p><p id="mg1" class="mgs" ></p>
+		<input type="text" name="name" id="name" class="input" >
+		
+		<p>Password *</p><p id="mg2"class="mgs"  ></p>
+		<input type="text" name="pass" id="pass" class="input" >
+		
+		<p>Confirm Password  *</p><p id="mg3"class="mgs"></p>
+		<input type="text" name="repass" id="repass" class="input" >
+
+		<br>
+		<p>(*)Mandatory</p>
+				`;
+				$('#contianer').append(html);
+				$('#head1').css('background-color','#2184be');
+				$('#next0').removeClass('next1');
+				$('#next0').addClass('next');
+				$('.previous').css('background-color','#333c49');
+		})
+		$('#button').on('click','.previous1',function(){
+			
+			$('#head3').css('background-color','#333c49');
+				$('#contianer').children().remove();
+				var html = `
+				<div class="content"><strong>Profile Information</strong></div>
+
+				<p>First name *</p><p id="mg4" class="mgg" ></p>
+				<input type="text" name="name" id="firstname" class="mggg">
+				<p>Last name *</p><p id="mg5"class="mgg" ></p>
+				<input type="text" name="pass" id="lastname" class="mggg">
+				<p>Email * </p><p id="ha3" class="mgg" ></p>
+				<input type="text" name="repass" id="email" class="mggg">
+				<p>Address * </p><p id="mg6" class="mgg" ></p>
+				<input type="text" name="repass" id="address" class="mggg">
+				<p>Age (The warning step will show up if age is less than 18) * </p><p id="ha5"  class="mgg" ></p>
+				<input type="text" name="repass" id="age" class="mggg">
+
+				<br>
+				<p>(*)Mandatory</p>`;
+				$('#contianer').append(html);
+				$('#head2').css('background-color','#2184be');
+				$('#next0').removeClass('next2');
+				$('#next0').addClass('next1');
+				$(this).removeClass('previous1');
+				$(this).addClass('previous');
+				$('.previous').css('background-color','#2184be');
+		})
+		$('#button').on('click','.previous2',function(){
+			$('#head4').css('background-color','#333c49');
+				$('#contianer').children().remove();
+				var html = `
+				<div class="content"><strong>You are to young</strong></div>
+
+				<p>Please go away ;-)</p>
+
+
+				<br>
+				<p>(*)Mandatory</p>`;
+				$('#contianer').append(html);
+				$('#head3').css('background-color','#2184be');
+				$(this).removeClass('previous2');
+				$(this).addClass('previous1');
+				$('.previous1').css('background-color','#2184be');
+		})
+
+	})
+
+	
+
+	
+</script>

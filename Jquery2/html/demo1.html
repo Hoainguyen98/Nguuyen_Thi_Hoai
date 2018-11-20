@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#section{
+			width: 50%;
+			background-color: black;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="section"></div>
+		<input id="show" type="button" name="" value="show">
+		<input id="hide" type="button" name="" value="hide">
+		<input id="Tg" type="button" name="" value="Toggle">
+		<input id="fade" type="button" name="" value="fade">
+	
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+         $('#show').on('click', function(){
+         	$('#section').show(1000);
+         })
+         $('#hide').on('click', function(){
+         	$('#section').hide(1000);
+         })
+         $('#Tg').on('click', function(){
+         	$('#section').toggle(1000);
+         })
+         $('#fade').on('click', function(){
+         	$('#section').fadeIn(1000);
+         })
+		})
+	</script>
+</body>
+</html>

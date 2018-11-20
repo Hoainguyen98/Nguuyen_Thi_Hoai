@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<b>---Iphone6----</b>
+	Bộ nhớ: <select id="size">
+		<option value="16">16 GB</option>
+		<option value="32">32 GB</option>
+		<option value="64">64 GB</option>	
+	</select>
+	<br>
+	<div id="price">
+		Giá là 5.000.000 Vnd
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#size').on('change', function(){
+				var value = $(this).val();
+				if (value==16) {
+					$('#price').text('Giá là 5.000.000')
+				}
+				if (value==32) {
+					$('#price').text('Giá là 6.000.000')
+				}
+				if (value==64) {
+					$('#price').text('Giá là 7.000.000')
+				}
+			})
+			
+		})
+	</script>
+</body>
+</html>
